@@ -1,5 +1,5 @@
 import { MDXProvider } from '@mdx-js/react'
-import { DocsContext, SourceContainer, DocsContextProps } from '@storybook/addon-docs/blocks'
+import { DocsContext, DocsContextProps } from '@storybook/addon-docs/blocks'
 import { useDarkMode } from 'storybook-dark-mode'
 
 import {
@@ -15,6 +15,8 @@ import {
   Chapters,
   CodeSnippet,
   CodeSnippetProps,
+  List,
+  ListItem,
 } from '../../../../src'
 
 import { lightColors, darkColors } from '../../src/theme'
@@ -33,6 +35,8 @@ const defaultComponents = {
   a: Link,
   pre: ({ children }) => children,
   code: Code,
+  ul: List,
+  li: ListItem,
   Playground,
   PropsTable,
   Chapters,

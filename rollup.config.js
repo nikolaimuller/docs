@@ -20,7 +20,12 @@ const config = [
       { ...standardOpts, dir: 'dist', format: 'cjs' },
       { ...standardOpts, dir: 'dist/esm', format: 'esm' },
     ],
-    external: [...Object.keys(pkg.dependencies), 'react/jsx-runtime'],
+    external: [
+      ...Object.keys(pkg.dependencies),
+      'react/jsx-runtime',
+      'prettier/standalone',
+      'prettier/parser-babel',
+    ],
     plugins: [
       typescript({
         tsconfig: 'tsconfig.json',
