@@ -11,7 +11,7 @@ import {
   DocsProvider,
   SectionTitle,
   Paragraph,
-  // PropsTable,
+  PropsTable,
   Chapters,
   CodeSnippet,
   CodeSnippetProps,
@@ -34,7 +34,7 @@ const defaultComponents = {
   pre: ({ children }) => children,
   code: Code,
   Playground,
-  // PropsTable,
+  PropsTable,
   Chapters,
 }
 
@@ -58,7 +58,7 @@ export const DocsContainer: React.FC<{ context: DocsContextProps; children: Reac
               'color-text-primary': '#000000',
               'color-text-secondary': '#686868',
               'color-neutral': lightColors.neutral,
-              'color-neutral-hover': '#eaeaea',
+              'color-neutral-hover': '#0000001a',
             },
             dark: {
               'color-background-primary': darkColors.background,
@@ -66,7 +66,7 @@ export const DocsContainer: React.FC<{ context: DocsContextProps; children: Reac
               'color-text-primary': '#eaeaea',
               'color-text-secondary': '#8a8a8a',
               'color-neutral': darkColors.neutral,
-              'color-neutral-hover': '#eaeaea',
+              'color-neutral-hover': '#ffffff21',
             },
           }}
           currentTheme={useDarkMode() ? 'dark' : 'light'}

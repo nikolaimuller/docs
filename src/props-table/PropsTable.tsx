@@ -1,7 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 
-import styles from './props-table.module.css'
-
 type PropType = string | { shortName: string; details: string }
 
 export type PropsTableProps = {
@@ -54,18 +52,18 @@ const TypeCell: React.FC<{ type: PropType }> = ({ type }) => {
   if (typeof type === 'string') return <div>{type}</div>
 
   return (
-    <div className={styles['props-table-cell']}>
+    <div className="docs-relative">
       <div ref={containerRef} style={{ display: 'contents' }}>
         <button
           tabIndex={0}
           onClick={() => toggleModal()}
-          className={styles['props-table-cell-trigger']}
+          className="docs-text-primary docs-outline-none hover:docs-underline focus:docs-underline"
         >
           {type.shortName}
         </button>
         {isShowDetails && (
-          <div className={styles['props-table-popup']}>
-            <p className={styles['props-table-popup-description']}>{type.details}</p>
+          <div className="docs-absolute docs-z-1 docs-px-2 docs-py-1 docs-mt-1 docs-bg-[color:var(--color-background-secondary)] docs-rounded-md">
+            <p className="docs-text-sm">{type.details}</p>
           </div>
         )}
       </div>
@@ -75,26 +73,34 @@ const TypeCell: React.FC<{ type: PropType }> = ({ type }) => {
 
 export const PropsTable: React.FC<PropsTableProps> = ({ data = [] }) => {
   return (
-    <div className={styles['props-table']}>
-      <table>
+    <div>
+      <table className="docs-w-full">
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Default</th>
+            <th className="docs-px-2 docs-py-1.5 docs-text-sm docs-text-left docs-uppercase">
+              Name
+            </th>
+            <th className="docs-px-2 docs-py-1.5 docs-text-sm docs-text-left docs-uppercase">
+              Type
+            </th>
+            <th className="docs-px-2 docs-py-1.5 docs-text-sm docs-text-left docs-uppercase">
+              Default
+            </th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className="docs-divide-y docs-divide-neutral docs-rounded-[var(--ui-radius)] docs-shadow-[0_0_0_1px_var(--color-neutral)] ">
           {data.map(({ name, type, defaultValue, required }) => (
             <tr key={name}>
-              <td>
+              <td className="docs-px-2 docs-py-1.5">
                 {name}
                 {required && <span>*</span>}
               </td>
-              <td>
+              <td className="docs-px-2 docs-py-1.5">
                 <TypeCell type={type} />
               </td>
-              <td>{defaultValue}</td>
+              <td className="docs-px-2 docs-py-1.5 empty:before:docs-content-['-']">
+                {defaultValue}
+              </td>
             </tr>
           ))}
         </tbody>

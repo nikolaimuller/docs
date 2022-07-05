@@ -2,8 +2,6 @@ import { useEffect, useRef } from 'react'
 
 import { WithChapters } from '../chapters/ChaptersContext'
 
-// import styles from './docs.module.css'
-
 export type DocsProviderProps<T extends string> = {
   themes?: Record<T, Record<string, string>>
   currentTheme?: T
@@ -19,7 +17,7 @@ const defaultTheme = {
   'color-text-primary': '#000000',
   'color-text-secondary': '#565656',
   'color-neutral': '#eef0f1',
-  'color-neutral-hover': '#dde0e3',
+  'color-neutral-hover': '#d7d7d7',
   // code colors
   'color-code-01': 'var(--color-text-secondary)',
   'color-code-02': '#9090909c',
@@ -33,6 +31,7 @@ const defaultTheme = {
   // typography
   'font-primary': 'sans-serif',
   'font-secondary': 'inherit',
+  'font-code': '"Monaco"',
 }
 
 export const DocsProvider = <T extends string>({

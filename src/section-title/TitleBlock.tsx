@@ -1,7 +1,6 @@
 import { useEffect, useMemo } from 'react'
-import { useChapters } from '../chapters/ChaptersContext'
 
-// import styles from './section-title.module.css'
+import { useChapters } from '../chapters/ChaptersContext'
 
 export const SectionTitle: React.FC<{ children: string }> = ({ children: title }) => {
   const { registerChapter, unregisterChapter } = useChapters()
@@ -16,7 +15,10 @@ export const SectionTitle: React.FC<{ children: string }> = ({ children: title }
   }, [id, registerChapter, title, unregisterChapter])
 
   return (
-    <h2 id={id} className={'section-title'}>
+    <h2
+      id={id}
+      className="docs-pb-1 docs-border-current docs-border-b-[2px] docs-mt-7 docs-mb-5 docs-text-2xl docs-font-bold"
+    >
       {title}
     </h2>
   )

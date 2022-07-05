@@ -3,7 +3,10 @@ export const Link: React.FC<React.AnchorHTMLAttributes<HTMLAnchorElement>> = ({
   ...props
 }) => {
   return (
-    <a className="tw-color-[var(--color-accent)] tw-font-semibold" {...props}>
+    <a
+      className="docs-text-primary hover:docs-underline focus:docs-underline docs-outline-none"
+      {...props}
+    >
       {children}
     </a>
   )

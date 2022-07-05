@@ -1,10 +1,6 @@
-import * as React from 'react'
-
 import { Link } from '../link'
 
 import { useChapters } from './ChaptersContext'
-
-// import styles from './chapters.module.css'
 
 export const Chapters: React.FC = () => {
   const { chapters } = useChapters()
@@ -12,9 +8,9 @@ export const Chapters: React.FC = () => {
   if (chapters.length === 0) return null
 
   return (
-    <ul className={'chapters'}>
+    <ul className="docs-my-4 docs-space-y-1">
       {chapters.map(({ title, id }, idx) => (
-        <li key={idx} className={'chapter'}>
+        <li key={idx} className="docs-text-lg">
           <Link href={`#${id}`} target="_self">
             {title}
           </Link>

@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ['@mullerstd/stylelint-config'],
+  extends: ['@mullerstd/stylelint-config', '@mullerstd/stylelint-config/tailwind'],
 }

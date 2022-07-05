@@ -5,9 +5,6 @@ import babylon from 'prettier/parser-babel'
 import { Card } from '../card'
 import { theme } from '../code-snippet/theme'
 
-// import styles from './playground.module.css'
-// import codeStyles from '../code-snippet/code-snippet.module.css'
-
 export type PlaygroundProps = { code: string } & Pick<LiveProviderProps, 'language' | 'scope'>
 
 export const Playground: React.FC<PlaygroundProps> = ({ code, language, scope }) => {
@@ -22,13 +19,13 @@ export const Playground: React.FC<PlaygroundProps> = ({ code, language, scope })
   }
 
   return (
-    <Card className={'playground'}>
+    <Card>
       <LiveProvider code={prettify(code)} lang={language} scope={scope} theme={theme}>
-        <div className={'preview'}>
+        <div className="docs-p-[1rem]">
           <LivePreview />
-          <LiveError className={'error'} />
+          <LiveError className="docs-text-[#df4b40]" />
         </div>
-        <LiveEditor className={'code'} />
+        <LiveEditor className="docs-bg-neutral selection:docs-bg-[var(--color-neutral-hover)] [&::-webkit-scrollbar]:docs-w-2 [&::-webkit-scrollbar]:docs-h-2 [&::-webkit-scrollbar-thumb]:docs-bg-neutral-hover [&::-webkit-scrollbar-thumb]:docs-rounded-full selection:docs-bg-neutral-hover" />
       </LiveProvider>
     </Card>
   )
