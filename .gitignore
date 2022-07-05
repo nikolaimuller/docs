@@ -12,7 +12,7 @@ node_modules
 # !.yarn/cache
 .pnp.*
 
-dist
+# dist
 
 # Logs
 logs
