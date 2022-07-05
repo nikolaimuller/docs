@@ -1,9 +1,8 @@
 /* @mullerstd/docs version: 0.0.1 */
-import * as React from 'react';
+import { jsx } from 'react/jsx-runtime';
 
-var Paragraph = function (_a) {
-    var children = _a.children;
-    return React.createElement("p", { className: 'paragraph' }, children);
+const Paragraph = ({ children }) => {
+    return jsx("p", { className: 'paragraph', children: children });
 };
 
 export { Paragraph };

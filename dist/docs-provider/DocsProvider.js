@@ -3,30 +3,11 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-var React = require('react');
+var jsxRuntime = require('react/jsx-runtime');
+var react = require('react');
 var ChaptersContext = require('../chapters/ChaptersContext.js');
 
-function _interopNamespace(e) {
-  if (e && e.__esModule) return e;
-  var n = Object.create(null);
-  if (e) {
-    Object.keys(e).forEach(function (k) {
-      if (k !== 'default') {
-        var d = Object.getOwnPropertyDescriptor(e, k);
-        Object.defineProperty(n, k, d.get ? d : {
-          enumerable: true,
-          get: function () { return e[k]; }
-        });
-      }
-    });
-  }
-  n["default"] = e;
-  return Object.freeze(n);
-}
-
-var React__namespace = /*#__PURE__*/_interopNamespace(React);
-
-var defaultTheme = {
+const defaultTheme = {
     'ui-radius': '4px',
     'color-accent': '#1061ff',
     'color-background-primary': '#ffffff',
@@ -47,19 +28,15 @@ var defaultTheme = {
     'font-primary': 'sans-serif',
     'font-secondary': 'inherit',
 };
-var DocsProvider = function (_a) {
-    var themes = _a.themes, currentTheme = _a.currentTheme, children = _a.children;
-    var docsRef = React__namespace.useRef(null);
-    React__namespace.useEffect(function () {
-        var theme = themes && currentTheme ? Object.assign(defaultTheme, themes[currentTheme]) : defaultTheme;
-        Object.entries(theme).map(function (_a) {
-            var _b;
-            var key = _a[0], value = _a[1];
-            (_b = docsRef.current) === null || _b === void 0 ? void 0 : _b.style.setProperty("--".concat(key), value);
+const DocsProvider = ({ themes, currentTheme, children, }) => {
+    const docsRef = react.useRef(null);
+    react.useEffect(() => {
+        const theme = themes && currentTheme ? Object.assign(defaultTheme, themes[currentTheme]) : defaultTheme;
+        Object.entries(theme).map(([key, value]) => {
+            docsRef.current?.style.setProperty(`--${key}`, value);
         });
     }, [currentTheme, themes]);
-    return (React__namespace.createElement(ChaptersContext.WithChapters, null,
-        React__namespace.createElement("div", { ref: docsRef }, children)));
+    return (jsxRuntime.jsx(ChaptersContext.WithChapters, { children: jsxRuntime.jsx("div", { ref: docsRef, children: children }) }));
 };
 
 exports.DocsProvider = DocsProvider;

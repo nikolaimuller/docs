@@ -1,13 +1,13 @@
-import * as React from 'react'
+import { useEffect, useMemo } from 'react'
 import { useChapters } from '../chapters/ChaptersContext'
 
 // import styles from './section-title.module.css'
 
 export const SectionTitle: React.FC<{ children: string }> = ({ children: title }) => {
   const { registerChapter, unregisterChapter } = useChapters()
-  const id = React.useMemo(() => title.toLowerCase().split(' ').join('-'), [title])
+  const id = useMemo(() => title.toLowerCase().split(' ').join('-'), [title])
 
-  React.useEffect(() => {
+  useEffect(() => {
     registerChapter({ id, title })
 
     return () => {

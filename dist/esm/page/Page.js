@@ -1,10 +1,8 @@
 /* @mullerstd/docs version: 0.0.1 */
-import * as React from 'react';
+import { jsx } from 'react/jsx-runtime';
 
-var Page = function (_a) {
-    var children = _a.children;
-    return (React.createElement("div", { className: 'page' },
-        React.createElement("div", { className: 'page-container' }, children)));
+const Page = ({ children }) => {
+    return (jsx("div", { className: 'page', children: jsx("div", { className: 'page-container', children: children }) }));
 };
 
 export { Page };

@@ -1,5 +1,3 @@
-import * as React from 'react'
-
 type Swatch = {
   name: string
   color: string

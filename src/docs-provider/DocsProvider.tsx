@@ -1,4 +1,4 @@
-import * as React from 'react'
+import { useEffect, useRef } from 'react'
 
 import { WithChapters } from '../chapters/ChaptersContext'
 
@@ -40,9 +40,9 @@ export const DocsProvider = <T extends string>({
   currentTheme,
   children,
 }: DocsProviderProps<T>): React.ReactElement => {
-  const docsRef = React.useRef<HTMLDivElement | null>(null)
+  const docsRef = useRef<HTMLDivElement | null>(null)
 
-  React.useEffect(() => {
+  useEffect(() => {
     const theme =
       themes && currentTheme ? Object.assign(defaultTheme, themes[currentTheme]) : defaultTheme
 

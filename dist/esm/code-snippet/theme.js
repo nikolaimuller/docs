@@ -1,5 +1,5 @@
 /* @mullerstd/docs version: 0.0.1 */
-var theme = {
+const theme = {
     plain: {
         color: 'var(--color-code-01)',
         backgroundColor: 'var(--color-neutral)',

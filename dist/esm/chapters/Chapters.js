@@ -1,17 +1,13 @@
 /* @mullerstd/docs version: 0.0.1 */
-import * as React from 'react';
+import { jsx } from 'react/jsx-runtime';
 import { Link } from '../link/Link.js';
 import { useChapters } from './ChaptersContext.js';
 
-var Chapters = function () {
-    var chapters = useChapters().chapters;
+const Chapters = () => {
+    const { chapters } = useChapters();
     if (chapters.length === 0)
         return null;
-    return (React.createElement("ul", { className: 'chapters' }, chapters.map(function (_a, idx) {
-        var title = _a.title, id = _a.id;
-        return (React.createElement("li", { key: idx, className: 'chapter' },
-            React.createElement(Link, { href: "#".concat(id), target: "_self" }, title)));
-    })));
+    return (jsx("ul", { className: 'chapters', children: chapters.map(({ title, id }, idx) => (jsx("li", { className: 'chapter', children: jsx(Link, { href: `#${id}`, target: "_self", children: title }) }, idx))) }));
 };
 
 export { Chapters };

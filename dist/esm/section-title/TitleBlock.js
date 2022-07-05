@@ -1,18 +1,18 @@
 /* @mullerstd/docs version: 0.0.1 */
-import * as React from 'react';
+import { jsx } from 'react/jsx-runtime';
+import { useMemo, useEffect } from 'react';
 import { useChapters } from '../chapters/ChaptersContext.js';
 
-var SectionTitle = function (_a) {
-    var title = _a.children;
-    var _b = useChapters(), registerChapter = _b.registerChapter, unregisterChapter = _b.unregisterChapter;
-    var id = React.useMemo(function () { return title.toLowerCase().split(' ').join('-'); }, [title]);
-    React.useEffect(function () {
-        registerChapter({ id: id, title: title });
-        return function () {
+const SectionTitle = ({ children: title }) => {
+    const { registerChapter, unregisterChapter } = useChapters();
+    const id = useMemo(() => title.toLowerCase().split(' ').join('-'), [title]);
+    useEffect(() => {
+        registerChapter({ id, title });
+        return () => {
             unregisterChapter(id);
         };
     }, [id, registerChapter, title, unregisterChapter]);
-    return (React.createElement("h2", { id: id, className: 'section-title' }, title));
+    return (jsx("h2", { id: id, className: 'section-title', children: title }));
 };
 
 export { SectionTitle };

@@ -3,7 +3,7 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-var theme = {
+const theme = {
     plain: {
         color: 'var(--color-code-01)',
         backgroundColor: 'var(--color-neutral)',

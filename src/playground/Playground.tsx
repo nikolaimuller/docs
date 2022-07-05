@@ -1,4 +1,3 @@
-import * as React from 'react'
 import { LiveEditor, LiveError, LivePreview, LiveProvider, LiveProviderProps } from 'react-live'
 import prettier from 'prettier/standalone'
 import babylon from 'prettier/parser-babel'

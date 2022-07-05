@@ -1,4 +1,4 @@
-import * as React from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 
 import styles from './props-table.module.css'
 
@@ -19,7 +19,7 @@ type UseClickOutside = (
 ) => void
 
 const useClickOutside: UseClickOutside = (ref, handler) => {
-  const handleClick = React.useCallback(
+  const handleClick = useCallback(
     (event: MouseEvent) => {
       if (ref.current && event.target) {
         !ref.current.contains(event.target as Node) && handler()
@@ -28,7 +28,7 @@ const useClickOutside: UseClickOutside = (ref, handler) => {
     [handler, ref],
   )
 
-  React.useEffect(() => {
+  useEffect(() => {
     document.addEventListener('mousedown', handleClick)
 
     return () => {
@@ -38,8 +38,8 @@ const useClickOutside: UseClickOutside = (ref, handler) => {
 }
 
 const TypeCell: React.FC<{ type: PropType }> = ({ type }) => {
-  const [isShowDetails, setShowDetails] = React.useState(false)
-  const containerRef = React.useRef<HTMLDivElement | null>(null)
+  const [isShowDetails, setShowDetails] = useState(false)
+  const containerRef = useRef<HTMLDivElement | null>(null)
 
   const closeModal = (): void => {
     setShowDetails(false)

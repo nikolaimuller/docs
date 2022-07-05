@@ -1,5 +1,3 @@
-import * as React from 'react'
-
 import Highlight, { Language, Prism } from 'prism-react-renderer'
 import prettier from 'prettier/standalone'
 import babylon from 'prettier/parser-babel'
@@ -7,8 +5,6 @@ import babylon from 'prettier/parser-babel'
 import { Card } from '../card'
 
 import { theme } from './theme'
-
-// import styles from './code-snippet.module.css'
 
 export type CodeSnippetProps = {
   children: string

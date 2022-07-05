@@ -1,4 +1,4 @@
-import * as React from 'react'
+import { createContext, useCallback, useContext, useState } from 'react'
 
 type Chapter = {
   id: string
@@ -11,20 +11,20 @@ export type ChaptersContextProps = {
   unregisterChapter: (id: string) => void
 }
 
-export const ChaptersContext = React.createContext<ChaptersContextProps>({
+export const ChaptersContext = createContext<ChaptersContextProps>({
   chapters: [],
   registerChapter: () => null,
   unregisterChapter: () => null,
 })
 
 export const WithChapters: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [chapters, setChapters] = React.useState<Array<Chapter>>([])
+  const [chapters, setChapters] = useState<Array<Chapter>>([])
 
-  const registerChapter = React.useCallback((payload: Chapter) => {
+  const registerChapter = useCallback((payload: Chapter) => {
     setChapters((prev) => [...prev, payload])
   }, [])
 
-  const unregisterChapter = React.useCallback((id: string) => {
+  const unregisterChapter = useCallback((id: string) => {
     setChapters((prev) => [...prev.filter((chapter) => chapter.id !== id)])
   }, [])
 
@@ -35,4 +35,4 @@ export const WithChapters: React.FC<{ children: React.ReactNode }> = ({ children
   )
 }
 
-export const useChapters = (): ChaptersContextProps => React.useContext(ChaptersContext)
+export const useChapters = (): ChaptersContextProps => useContext(ChaptersContext)

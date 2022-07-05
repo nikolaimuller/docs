@@ -1,8 +1,9 @@
 /* @mullerstd/docs version: 0.0.1 */
-import * as React from 'react';
+import { jsx } from 'react/jsx-runtime';
+import { useRef, useEffect } from 'react';
 import { WithChapters } from '../chapters/ChaptersContext.js';
 
-var defaultTheme = {
+const defaultTheme = {
     'ui-radius': '4px',
     'color-accent': '#1061ff',
     'color-background-primary': '#ffffff',
@@ -23,19 +24,15 @@ var defaultTheme = {
     'font-primary': 'sans-serif',
     'font-secondary': 'inherit',
 };
-var DocsProvider = function (_a) {
-    var themes = _a.themes, currentTheme = _a.currentTheme, children = _a.children;
-    var docsRef = React.useRef(null);
-    React.useEffect(function () {
-        var theme = themes && currentTheme ? Object.assign(defaultTheme, themes[currentTheme]) : defaultTheme;
-        Object.entries(theme).map(function (_a) {
-            var _b;
-            var key = _a[0], value = _a[1];
-            (_b = docsRef.current) === null || _b === void 0 ? void 0 : _b.style.setProperty("--".concat(key), value);
+const DocsProvider = ({ themes, currentTheme, children, }) => {
+    const docsRef = useRef(null);
+    useEffect(() => {
+        const theme = themes && currentTheme ? Object.assign(defaultTheme, themes[currentTheme]) : defaultTheme;
+        Object.entries(theme).map(([key, value]) => {
+            docsRef.current?.style.setProperty(`--${key}`, value);
         });
     }, [currentTheme, themes]);
-    return (React.createElement(WithChapters, null,
-        React.createElement("div", { ref: docsRef }, children)));
+    return (jsx(WithChapters, { children: jsx("div", { ref: docsRef, children: children }) }));
 };
 
 export { DocsProvider };

@@ -1,9 +1,8 @@
 /* @mullerstd/docs version: 0.0.1 */
-import * as React from 'react';
+import { jsx } from 'react/jsx-runtime';
 
-var Subtitle = function (_a) {
-    var children = _a.children;
-    return React.createElement("h3", { className: 'subtitle' }, children);
+const Subtitle = ({ children }) => {
+    return jsx("h3", { className: 'subtitle', children: children });
 };
 
 export { Subtitle };
