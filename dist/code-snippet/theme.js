@@ -6,6 +6,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 const theme = {
     plain: {
         color: 'var(--color-code-01)',
+        padding: '0',
     },
     styles: [
         {

@@ -25,7 +25,7 @@ const Playground = ({ code, language, scope }) => {
         })
             .trim();
     };
-    return (jsxRuntime.jsx(Card.Card, { children: jsxRuntime.jsxs(reactLive.LiveProvider, { code: prettify(code), lang: language, scope: scope, theme: theme.theme, children: [jsxRuntime.jsxs("div", { className: "docs-p-[1rem]", children: [jsxRuntime.jsx(reactLive.LivePreview, {}), jsxRuntime.jsx(reactLive.LiveError, { className: "docs-text-[#df4b40]" })] }), jsxRuntime.jsx(reactLive.LiveEditor, { className: "docs-bg-neutral selection:docs-bg-[var(--color-neutral-hover)] [&::-webkit-scrollbar]:docs-w-2 [&::-webkit-scrollbar]:docs-h-2 [&::-webkit-scrollbar-thumb]:docs-bg-neutral-hover [&::-webkit-scrollbar-thumb]:docs-rounded-full selection:docs-bg-neutral-hover" })] }) }));
+    return (jsxRuntime.jsx(Card.Card, { children: jsxRuntime.jsxs(reactLive.LiveProvider, { code: prettify(code), lang: language, scope: scope, theme: theme.theme, children: [jsxRuntime.jsxs("div", { className: "docs-p-[1rem]", children: [jsxRuntime.jsx(reactLive.LivePreview, {}), jsxRuntime.jsx(reactLive.LiveError, { className: "docs-text-[#df4b40]" })] }), jsxRuntime.jsx(reactLive.LiveEditor, { className: "selection:docs-bg-[var(--color-neutral-hover)] docs-bg-neutral docs-p-[1rem] selection:docs-bg-neutral-hover [&::-webkit-scrollbar]:docs-h-2 [&::-webkit-scrollbar]:docs-w-2 [&::-webkit-scrollbar-thumb]:docs-rounded-full [&::-webkit-scrollbar-thumb]:docs-bg-neutral-hover" })] }) }));
 };
 
 exports.Playground = Playground;

@@ -4,7 +4,7 @@ export const Link: React.FC<React.AnchorHTMLAttributes<HTMLAnchorElement>> = ({
 }) => {
   return (
     <a
-      className="docs-text-primary hover:docs-underline focus:docs-underline docs-outline-none"
+      className="docs-text-primary docs-outline-none hover:docs-underline focus:docs-underline"
       {...props}
     >
       {children}

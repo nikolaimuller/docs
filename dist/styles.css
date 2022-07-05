@@ -625,6 +625,10 @@ video {
   max-width: 72rem;
 }
 
+.docs-list-disc {
+  list-style-type: disc;
+}
+
 .docs-grid-flow-col {
   grid-auto-flow: column;
 }
@@ -716,6 +720,10 @@ video {
 .docs-py-1\.5 {
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
+}
+
+.docs-pl-6 {
+  padding-left: 1.5rem;
 }
 
 .docs-pb-1 {

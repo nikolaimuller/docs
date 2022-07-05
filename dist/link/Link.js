@@ -6,7 +6,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 var jsxRuntime = require('react/jsx-runtime');
 
 const Link = ({ children, ...props }) => {
-    return (jsxRuntime.jsx("a", { className: "docs-text-primary hover:docs-underline focus:docs-underline docs-outline-none", ...props, children: children }));
+    return (jsxRuntime.jsx("a", { className: "docs-text-primary docs-outline-none hover:docs-underline focus:docs-underline", ...props, children: children }));
 };
 
 exports.Link = Link;

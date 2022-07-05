@@ -62,7 +62,7 @@ const TypeCell: React.FC<{ type: PropType }> = ({ type }) => {
           {type.shortName}
         </button>
         {isShowDetails && (
-          <div className="docs-absolute docs-z-1 docs-px-2 docs-py-1 docs-mt-1 docs-bg-[color:var(--color-background-secondary)] docs-rounded-md">
+          <div className="docs-z-1 docs-absolute docs-mt-1 docs-rounded-md docs-bg-[color:var(--color-background-secondary)] docs-px-2 docs-py-1">
             <p className="docs-text-sm">{type.details}</p>
           </div>
         )}
@@ -77,13 +77,13 @@ export const PropsTable: React.FC<PropsTableProps> = ({ data = [] }) => {
       <table className="docs-w-full">
         <thead>
           <tr>
-            <th className="docs-px-2 docs-py-1.5 docs-text-sm docs-text-left docs-uppercase">
+            <th className="docs-px-2 docs-py-1.5 docs-text-left docs-text-sm docs-uppercase">
               Name
             </th>
-            <th className="docs-px-2 docs-py-1.5 docs-text-sm docs-text-left docs-uppercase">
+            <th className="docs-px-2 docs-py-1.5 docs-text-left docs-text-sm docs-uppercase">
               Type
             </th>
-            <th className="docs-px-2 docs-py-1.5 docs-text-sm docs-text-left docs-uppercase">
+            <th className="docs-px-2 docs-py-1.5 docs-text-left docs-text-sm docs-uppercase">
               Default
             </th>
           </tr>

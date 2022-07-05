@@ -4,6 +4,8 @@ export { Card } from './card/Card.js';
 export { Chapters } from './chapters/Chapters.js';
 export { Page } from './page/Page.js';
 export { Link } from './link/Link.js';
+export { List } from './list/List.js';
+export { ListItem } from './list/ListItem.js';
 export { PageTitle } from './page-title/PageTitle.js';
 export { SectionTitle } from './section-title/TitleBlock.js';
 export { Paragraph } from './paragraph/Paragraph.js';

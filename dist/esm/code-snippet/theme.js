@@ -2,6 +2,7 @@
 const theme = {
     plain: {
         color: 'var(--color-code-01)',
+        padding: '0',
     },
     styles: [
         {
