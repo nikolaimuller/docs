@@ -11,7 +11,7 @@ import {
   DocsProvider,
   SectionTitle,
   Paragraph,
-  PropsTable,
+  // PropsTable,
   Chapters,
   CodeSnippet,
   CodeSnippetProps,
@@ -34,7 +34,7 @@ const defaultComponents = {
   pre: ({ children }) => children,
   code: Code,
   Playground,
-  PropsTable,
+  // PropsTable,
   Chapters,
 }
 

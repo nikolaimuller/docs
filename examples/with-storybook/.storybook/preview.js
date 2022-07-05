@@ -1,5 +1,7 @@
 import { DocsContainer } from './components/DocsContainer'
 
+import '../../../src/styles/tailwind.css'
+
 export const parameters = {
   actions: { argTypesRegex: '^on.*' },
   controls: {
