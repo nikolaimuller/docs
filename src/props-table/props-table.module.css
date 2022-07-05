@@ -1,0 +1,67 @@
+.props-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.props-table tbody {
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px var(--color-neutral);
+}
+
+.props-table tr:not(:first-child) {
+  border-top: 1px solid var(--color-neutral);
+}
+
+.props-table td:empty::before {
+  content: '-';
+}
+
+.props-table th,
+.props-table td {
+  padding: 0.75rem 1rem;
+}
+
+.props-table th {
+  font-size: 0.75rem;
+  text-align: start;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.props-table td {
+  font-size: 0.875rem;
+}
+
+.props-table-cell {
+  position: relative;
+}
+
+.props-table-cell-trigger {
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--color-accent);
+  cursor: pointer;
+  font-family: var(--font-primary);
+  font-size: inherit;
+  outline: none;
+}
+
+.props-table-cell-trigger:hover,
+.props-table-cell-trigger:focus {
+  text-decoration: underline;
+}
+
+.props-table-popup {
+  position: absolute;
+  z-index: 1;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  background: var(--color-background-secondary);
+  border-radius: 5px;
+}
+
+.props-table-popup-description {
+  margin: 0;
+  font-size: 0.75rem;
+}

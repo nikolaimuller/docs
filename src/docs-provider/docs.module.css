@@ -1,0 +1,11 @@
+.docs {
+  min-height: 100vh;
+  background-color: var(--color-background-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-primary);
+}
+
+.docs *::selection {
+  background-color: var(--color-accent);
+  color: #ffffff;
+}

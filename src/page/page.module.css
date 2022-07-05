@@ -1,0 +1,9 @@
+.page {
+  padding: 3rem 0;
+}
+
+.page-container {
+  max-width: 64rem;
+  padding: 0 1rem;
+  margin: 0 auto;
+}

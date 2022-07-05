@@ -1,0 +1,61 @@
+import { Button } from './Button'
+
+# Button
+
+The button component
+
+<Chapters />
+
+## Overview
+
+<Playground
+  code={`
+    <Button size={Button.Size.Medium}>Button</Button>
+  `}
+  scope={{
+    Button,
+  }}
+  language="tsx"
+/>
+
+## Usage
+
+```tsx
+import { Button } from './Button'
+
+const Example: React.FC = () => {
+  return <Button size={Button.Size.Medium}>Button</Button>
+}
+```
+
+## Props
+
+<PropsTable
+  data={[
+    { name: 'type', type: 'button | submit | reset', defaultValue: 'button' },
+    { name: 'disabled', type: 'boolean', defaultValue: 'false' },
+    {
+      name: 'size',
+      type: {
+        shortName: 'ButtonSize',
+        details: 'Small | Medium',
+      },
+      defaultValue: 'Small',
+    },
+  ]}
+/>
+
+## Variants
+
+<Playground
+  code={`
+    <div style={{ display: 'flex', gap: '0.5rem' }}>
+      <Button size={Button.Size.Small}>Button</Button>
+      <Button size={Button.Size.Medium}>Button</Button>
+    </div>
+  `}
+  scope={{
+    Button,
+  }}
+  language="tsx"
+/>

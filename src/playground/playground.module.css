@@ -1,0 +1,25 @@
+.playground textarea {
+  outline: none;
+}
+
+.playground textarea::selection {
+  background-color: var(--color-neutral-hover);
+}
+
+.preview {
+  padding: 1rem;
+}
+
+.code::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+.code::-webkit-scrollbar-thumb {
+  background-color: var(--color-neutral-secondary);
+  border-radius: 9999px;
+}
+
+.error {
+  color: #df4b40;
+}
