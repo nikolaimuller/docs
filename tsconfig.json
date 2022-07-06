@@ -4,6 +4,7 @@
     "jsx": "react-jsx",
     "module": "ESNext",
     "lib": ["ESNext", "dom"],
+    "declaration": true,
     "isolatedModules": true,
     "allowSyntheticDefaultImports": true,
     "allowJs": true,

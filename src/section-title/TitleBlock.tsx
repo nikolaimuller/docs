@@ -17,7 +17,7 @@ export const SectionTitle: React.FC<{ children: string }> = ({ children: title }
   return (
     <h2
       id={id}
-      className="docs-mt-7 docs-mb-5 docs-border-b-[2px] docs-border-current docs-pb-1 docs-text-2xl docs-font-bold"
+      className="docs-mt-9 docs-mb-5 docs-border-b-[2px] docs-border-current docs-pb-1 docs-text-2xl docs-font-bold"
     >
       {title}
     </h2>

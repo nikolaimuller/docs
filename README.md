@@ -1,4 +1,4 @@
-# @mullerstd/docs
+### @mullerstd/docs
 
 UI components for build docs without pain
 

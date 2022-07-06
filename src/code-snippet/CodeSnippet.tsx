@@ -32,7 +32,7 @@ export const CodeSnippet: React.FC<CodeSnippetProps> = ({ children: code, langua
     <Card>
       <Highlight Prism={Prism} code={prettify(code)} language={language} theme={theme}>
         {({ tokens, getLineProps, getTokenProps }) => (
-          <pre className="docs-bg-neutral docs-p-[1rem] docs-font-code selection:docs-text-inherit selection:docs-bg-[color:var(--color-neutral-hover)]">
+          <pre className="docs-bg-neutral docs-p-[1rem] docs-font-code selection:docs-bg-[color:var(--color-neutral-hover)] selection:docs-text-inherit">
             {tokens.map((line, key) => (
               <div {...getLineProps({ line })} key={key}>
                 {line.map((token, key) => (
