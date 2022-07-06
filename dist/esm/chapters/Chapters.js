@@ -1,4 +1,4 @@
-/* @mullerstd/docs version: 0.0.1 */
+/* @mullerstd/docs version: 0.0.2 */
 import { jsx } from 'react/jsx-runtime';
 import { Link } from '../link/Link.js';
 import { useChapters } from './ChaptersContext.js';

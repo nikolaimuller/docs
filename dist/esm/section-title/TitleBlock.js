@@ -1,4 +1,4 @@
-/* @mullerstd/docs version: 0.0.1 */
+/* @mullerstd/docs version: 0.0.2 */
 import { jsx } from 'react/jsx-runtime';
 import { useMemo, useEffect } from 'react';
 import { useChapters } from '../chapters/ChaptersContext.js';

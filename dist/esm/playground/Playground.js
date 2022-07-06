@@ -1,4 +1,4 @@
-/* @mullerstd/docs version: 0.0.1 */
+/* @mullerstd/docs version: 0.0.2 */
 import { jsx, jsxs } from 'react/jsx-runtime';
 import { LiveProvider, LivePreview, LiveError, LiveEditor } from 'react-live';
 import prettier from 'prettier/standalone';

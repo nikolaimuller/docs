@@ -1,4 +1,4 @@
-/* @mullerstd/docs version: 0.0.1 */
+/* @mullerstd/docs version: 0.0.2 */
 const theme = {
     plain: {
         color: 'var(--color-code-01)',

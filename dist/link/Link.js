@@ -1,4 +1,4 @@
-/* @mullerstd/docs version: 0.0.1 */
+/* @mullerstd/docs version: 0.0.2 */
 'use strict';
 
 Object.defineProperty(exports, '__esModule', { value: true });
