@@ -6,9 +6,11 @@ import { Card } from '../card'
 
 import { theme } from './theme'
 
+export type CodeLanguage = Language
+
 export type CodeSnippetProps = {
   children: string
-  language: Language
+  language: CodeLanguage
 }
 
 export const CodeSnippet: React.FC<CodeSnippetProps> = ({ children: code, language }) => {

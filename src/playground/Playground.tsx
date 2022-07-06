@@ -4,8 +4,12 @@ import babylon from 'prettier/parser-babel'
 
 import { Card } from '../card'
 import { theme } from '../code-snippet/theme'
+import { CodeLanguage } from '../code-snippet'
 
-export type PlaygroundProps = { code: string } & Pick<LiveProviderProps, 'language' | 'scope'>
+export type PlaygroundProps = { code: string; language: CodeLanguage } & Pick<
+  LiveProviderProps,
+  'scope'
+>
 
 export const Playground: React.FC<PlaygroundProps> = ({ code, language, scope }) => {
   const prettify = (code: string): string => {
