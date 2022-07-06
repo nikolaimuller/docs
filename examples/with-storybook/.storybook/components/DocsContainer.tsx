@@ -15,6 +15,7 @@ import {
   Chapters,
   CodeSnippet,
   CodeSnippetProps,
+  InlineCode,
   List,
   ListItem,
 } from '../../../../src'
@@ -33,8 +34,9 @@ const defaultComponents = {
   h3: Subtitle,
   p: Paragraph,
   a: Link,
-  pre: ({ children }) => children,
+  pre: ({ children }) => <pre>{children}</pre>,
   code: Code,
+  inlineCode: InlineCode,
   ul: List,
   li: ListItem,
   Playground,

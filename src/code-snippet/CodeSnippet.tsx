@@ -23,7 +23,7 @@ export const CodeSnippet: React.FC<CodeSnippetProps> = ({ children: code, langua
           .trim()
       }
       default: {
-        return code
+        return code.trim()
       }
     }
   }
@@ -46,3 +46,7 @@ export const CodeSnippet: React.FC<CodeSnippetProps> = ({ children: code, langua
     </Card>
   )
 }
+
+export const InlineCode: React.FC<{ children: string }> = ({ children }) => (
+  <code className="docs-rounded-md docs-bg-neutral docs-p-1">{children}</code>
+)

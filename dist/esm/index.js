@@ -13,4 +13,4 @@ export { PropsTable } from './props-table/PropsTable.js';
 export { ColorsTable } from './colors-table/ColorsTable.js';
 export { Subtitle } from './subtitle/Subtitle.js';
 export { Playground } from './playground/Playground.js';
-export { CodeSnippet } from './code-snippet/CodeSnippet.js';
+export { CodeSnippet, InlineCode } from './code-snippet/CodeSnippet.js';

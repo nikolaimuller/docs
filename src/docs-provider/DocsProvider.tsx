@@ -15,7 +15,7 @@ const defaultTheme = {
   'color-background-primary': '#ffffff',
   'color-background-secondary': '#eaeaea',
   'color-text-primary': '#000000',
-  'color-text-secondary': '#565656',
+  'color-text-secondary': '#5e5e5e',
   'color-neutral': '#eef0f1',
   'color-neutral-hover': '#d7d7d7',
   // code colors

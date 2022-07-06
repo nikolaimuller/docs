@@ -36,3 +36,4 @@ exports.ColorsTable = ColorsTable.ColorsTable;
 exports.Subtitle = Subtitle.Subtitle;
 exports.Playground = Playground.Playground;
 exports.CodeSnippet = CodeSnippet.CodeSnippet;
+exports.InlineCode = CodeSnippet.InlineCode;
