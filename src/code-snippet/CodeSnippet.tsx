@@ -13,12 +13,19 @@ export type CodeSnippetProps = {
 
 export const CodeSnippet: React.FC<CodeSnippetProps> = ({ children: code, language }) => {
   const prettify = (code: string): string => {
-    return prettier
-      .format(code, {
-        parser: 'babel',
-        plugins: [babylon],
-      })
-      .trim()
+    switch (language) {
+      case 'tsx': {
+        return prettier
+          .format(code, {
+            parser: 'babel',
+            plugins: [babylon],
+          })
+          .trim()
+      }
+      default: {
+        return code
+      }
+    }
   }
 
   return (

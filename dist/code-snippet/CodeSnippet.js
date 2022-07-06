@@ -19,12 +19,19 @@ var babylon__default = /*#__PURE__*/_interopDefaultLegacy(babylon);
 
 const CodeSnippet = ({ children: code, language }) => {
     const prettify = (code) => {
-        return prettier__default["default"]
-            .format(code, {
-            parser: 'babel',
-            plugins: [babylon__default["default"]],
-        })
-            .trim();
+        switch (language) {
+            case 'tsx': {
+                return prettier__default["default"]
+                    .format(code, {
+                    parser: 'babel',
+                    plugins: [babylon__default["default"]],
+                })
+                    .trim();
+            }
+            default: {
+                return code;
+            }
+        }
     };
     return (jsxRuntime.jsx(Card.Card, { children: jsxRuntime.jsx(Highlight__default["default"], { Prism: Highlight.Prism, code: prettify(code), language: language, theme: theme.theme, children: ({ tokens, getLineProps, getTokenProps }) => (jsxRuntime.jsx("pre", { className: "docs-bg-neutral docs-p-[1rem] docs-font-code selection:docs-bg-[color:var(--color-neutral-hover)]", children: tokens.map((line, key) => (react.createElement("div", { ...getLineProps({ line }), key: key }, line.map((token, key) => (react.createElement("span", { ...getTokenProps({ token }), key: key })))))) })) }) }));
 };
