@@ -33,7 +33,7 @@ const CodeSnippet = ({ children: code, language }) => {
             }
         }
     };
-    return (jsxRuntime.jsx(Card.Card, { children: jsxRuntime.jsx(Highlight__default["default"], { Prism: Highlight.Prism, code: prettify(code), language: language, theme: theme.theme, children: ({ tokens, getLineProps, getTokenProps }) => (jsxRuntime.jsx("pre", { className: "docs-bg-neutral docs-p-[1rem] docs-font-code selection:docs-bg-[color:var(--color-neutral-hover)]", children: tokens.map((line, key) => (react.createElement("div", { ...getLineProps({ line }), key: key }, line.map((token, key) => (react.createElement("span", { ...getTokenProps({ token }), key: key })))))) })) }) }));
+    return (jsxRuntime.jsx(Card.Card, { children: jsxRuntime.jsx(Highlight__default["default"], { Prism: Highlight.Prism, code: prettify(code), language: language, theme: theme.theme, children: ({ tokens, getLineProps, getTokenProps }) => (jsxRuntime.jsx("pre", { className: "docs-bg-neutral docs-p-[1rem] docs-font-code selection:docs-text-inherit selection:docs-bg-[color:var(--color-neutral-hover)]", children: tokens.map((line, key) => (react.createElement("div", { ...getLineProps({ line }), key: key }, line.map((token, key) => (react.createElement("span", { ...getTokenProps({ token }), key: key })))))) })) }) }));
 };
 const InlineCode = ({ children }) => (jsxRuntime.jsx("code", { className: "docs-rounded-md docs-bg-neutral docs-p-1", children: children }));
 

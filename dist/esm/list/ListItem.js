@@ -2,7 +2,7 @@
 import { jsx } from 'react/jsx-runtime';
 
 const ListItem = ({ children }) => {
-    return jsx("li", { className: "docs-text-lg", children: children });
+    return jsx("li", { className: "docs-text-base", children: children });
 };
 
 export { ListItem };

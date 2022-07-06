@@ -581,10 +581,6 @@ video {
   margin-bottom: 0.75rem;
 }
 
-.docs-mt-4 {
-  margin-top: 1rem;
-}
-
 .docs-mt-7 {
   margin-top: 1.75rem;
 }
@@ -756,6 +752,11 @@ video {
   line-height: 1.25rem;
 }
 
+.docs-text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 .docs-text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -818,6 +819,14 @@ video {
   background-color: var(--color-neutral-hover);
 }
 
+.selection\:docs-text-inherit *::-moz-selection {
+  color: inherit;
+}
+
+.selection\:docs-text-inherit *::selection {
+  color: inherit;
+}
+
 .selection\:docs-bg-\[color\:var\(--color-neutral-hover\)\]::-moz-selection {
   background-color: var(--color-neutral-hover);
 }
@@ -832,6 +841,14 @@ video {
 
 .selection\:docs-bg-neutral-hover::selection {
   background-color: var(--color-neutral-hover);
+}
+
+.selection\:docs-text-inherit::-moz-selection {
+  color: inherit;
+}
+
+.selection\:docs-text-inherit::selection {
+  color: inherit;
 }
 
 .empty\:before\:docs-content-\[\'-\'\]:empty::before {

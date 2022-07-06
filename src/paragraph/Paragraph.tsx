@@ -1,3 +1,3 @@
 export const Paragraph: React.FC<{ children: string }> = ({ children }) => {
-  return <p className="docs-mt-4">{children}</p>
+  return <p className="docs-my-4">{children}</p>
 }

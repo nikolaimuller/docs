@@ -6,7 +6,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 var jsxRuntime = require('react/jsx-runtime');
 
 const ListItem = ({ children }) => {
-    return jsxRuntime.jsx("li", { className: "docs-text-lg", children: children });
+    return jsxRuntime.jsx("li", { className: "docs-text-base", children: children });
 };
 
 exports.ListItem = ListItem;

@@ -23,7 +23,7 @@ const CodeSnippet = ({ children: code, language }) => {
             }
         }
     };
-    return (jsx(Card, { children: jsx(Highlight, { Prism: Prism, code: prettify(code), language: language, theme: theme, children: ({ tokens, getLineProps, getTokenProps }) => (jsx("pre", { className: "docs-bg-neutral docs-p-[1rem] docs-font-code selection:docs-bg-[color:var(--color-neutral-hover)]", children: tokens.map((line, key) => (createElement("div", { ...getLineProps({ line }), key: key }, line.map((token, key) => (createElement("span", { ...getTokenProps({ token }), key: key })))))) })) }) }));
+    return (jsx(Card, { children: jsx(Highlight, { Prism: Prism, code: prettify(code), language: language, theme: theme, children: ({ tokens, getLineProps, getTokenProps }) => (jsx("pre", { className: "docs-bg-neutral docs-p-[1rem] docs-font-code selection:docs-text-inherit selection:docs-bg-[color:var(--color-neutral-hover)]", children: tokens.map((line, key) => (createElement("div", { ...getLineProps({ line }), key: key }, line.map((token, key) => (createElement("span", { ...getTokenProps({ token }), key: key })))))) })) }) }));
 };
 const InlineCode = ({ children }) => (jsx("code", { className: "docs-rounded-md docs-bg-neutral docs-p-1", children: children }));
 
