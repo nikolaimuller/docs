@@ -1,9 +1,9 @@
 /// <reference types="react" />
-declare type Swatch = {
+type Swatch = {
     name: string;
     color: string;
 };
-export declare type ColorsTableProps = {
+export type ColorsTableProps = {
     palletes: Array<{
         title: string;
         swatches: Array<Swatch>;

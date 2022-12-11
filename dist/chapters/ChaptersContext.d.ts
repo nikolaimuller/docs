@@ -1,9 +1,9 @@
 /// <reference types="react" />
-declare type Chapter = {
+type Chapter = {
     id: string;
     title: string;
 };
-export declare type ChaptersContextProps = {
+export type ChaptersContextProps = {
     chapters: Array<Chapter>;
     registerChapter: (payload: Chapter) => void;
     unregisterChapter: (id: string) => void;

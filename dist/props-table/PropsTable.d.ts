@@ -1,9 +1,9 @@
 /// <reference types="react" />
-declare type PropType = string | {
+type PropType = string | {
     shortName: string;
     details: string;
 };
-export declare type PropsTableProps = {
+export type PropsTableProps = {
     data: Array<{
         name: string;
         type: PropType;

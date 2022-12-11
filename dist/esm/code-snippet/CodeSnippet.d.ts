@@ -1,7 +1,7 @@
 /// <reference types="react" />
 import { Language } from 'prism-react-renderer';
-export declare type CodeLanguage = Language;
-export declare type CodeSnippetProps = {
+export type CodeLanguage = Language;
+export type CodeSnippetProps = {
     children: string;
     language: CodeLanguage;
 };

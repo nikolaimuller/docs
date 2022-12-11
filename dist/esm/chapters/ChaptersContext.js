@@ -1,6 +1,6 @@
 /* @mullerstd/docs version: 0.0.2 */
 import { jsx } from 'react/jsx-runtime';
-import { createContext, useContext, useState, useCallback } from 'react';
+import { createContext, useState, useCallback, useContext } from 'react';
 
 const ChaptersContext = createContext({
     chapters: [],
