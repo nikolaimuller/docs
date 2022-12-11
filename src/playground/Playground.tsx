@@ -29,7 +29,7 @@ export const Playground: React.FC<PlaygroundProps> = ({ code, language, scope })
           <LivePreview />
           <LiveError className="docs-text-[#df4b40]" />
         </div>
-        <LiveEditor className="selection:docs-bg-[var(--color-neutral-hover)] docs-bg-neutral docs-p-[1rem] selection:docs-bg-neutral-hover [&::-webkit-scrollbar]:docs-h-2 [&::-webkit-scrollbar]:docs-w-2 [&::-webkit-scrollbar-thumb]:docs-rounded-full [&::-webkit-scrollbar-thumb]:docs-bg-neutral-hover" />
+        <LiveEditor className="docs-bg-neutral docs-p-[1rem] selection:docs-bg-[var(--color-neutral-hover)] selection:docs-bg-neutral-hover [&::-webkit-scrollbar]:docs-h-2 [&::-webkit-scrollbar]:docs-w-2 [&::-webkit-scrollbar-thumb]:docs-rounded-full [&::-webkit-scrollbar-thumb]:docs-bg-neutral-hover" />
       </LiveProvider>
     </Card>
   )
