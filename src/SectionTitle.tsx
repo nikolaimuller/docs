@@ -1,6 +1,6 @@
 import { useEffect, useMemo } from 'react'
 
-import { useChapters } from '../chapters/ChaptersContext'
+import { useChapters } from './Chapters'
 
 export const SectionTitle: React.FC<{ children: string }> = ({ children: title }) => {
   const { registerChapter, unregisterChapter } = useChapters()

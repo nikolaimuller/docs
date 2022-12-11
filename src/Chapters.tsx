@@ -1,5 +1,7 @@
 import { createContext, useCallback, useContext, useState } from 'react'
 
+import { Link } from './Link'
+
 type Chapter = {
   id: string
   title: string
@@ -36,3 +38,21 @@ export const WithChapters: React.FC<{ children: React.ReactNode }> = ({ children
 }
 
 export const useChapters = (): ChaptersContextProps => useContext(ChaptersContext)
+
+export const Chapters: React.FC = () => {
+  const { chapters } = useChapters()
+
+  if (chapters.length === 0) return null
+
+  return (
+    <ul className="docs-my-4 docs-space-y-1">
+      {chapters.map(({ title, id }, idx) => (
+        <li key={idx} className="docs-text-lg">
+          <Link href={`#${id}`} target="_self">
+            {title}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  )
+}

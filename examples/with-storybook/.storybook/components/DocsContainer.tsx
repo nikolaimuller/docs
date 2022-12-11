@@ -1,3 +1,4 @@
+import * as React from 'react'
 import { MDXProvider } from '@mdx-js/react'
 import { DocsContext, DocsContextProps } from '@storybook/addon-docs/blocks'
 import { useDarkMode } from 'storybook-dark-mode'
@@ -18,14 +19,27 @@ import {
   InlineCode,
   List,
   ListItem,
+  CodeLanguage,
 } from '../../../../src'
 
 import { lightColors, darkColors } from '../../src/theme'
 
-const Code: React.FC<{ className: string } & CodeSnippetProps> = ({ className, ...props }) => {
+function getLanguageFromClassName(className: string): CodeLanguage {
   const match = /language-(\w+)/.exec(className || '')
 
-  return <CodeSnippet language={match[1]} {...props} />
+  if (match === null) {
+    throw new Error('Unsupport language')
+  }
+
+  return match[1] as CodeLanguage
+}
+
+const Code: React.FC<{ className: string } & CodeSnippetProps> = ({
+  className,
+  language,
+  ...props
+}) => {
+  return <CodeSnippet language={language || getLanguageFromClassName(className || '')} {...props} />
 }
 
 const defaultComponents = {

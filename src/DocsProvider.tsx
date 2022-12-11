@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 
-import { WithChapters } from '../chapters/ChaptersContext'
+import { WithChapters } from './Chapters'
 
 export type DocsProviderProps<T extends string> = {
   themes?: Record<T, Record<string, string>>
