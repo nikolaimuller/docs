@@ -2,7 +2,7 @@ import cx from 'classnames'
 
 export const Card: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
   children,
-  className = '',
+  className,
   ...props
 }) => {
   return (
