@@ -9,7 +9,11 @@
     "README.md"
   ],
   "exports": {
-    "styles": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/esm/index.js"
+    },
+    "./styles": {
       "import": "./dist/styles.css",
       "require": "./dist/esm/styles.css"
     }
