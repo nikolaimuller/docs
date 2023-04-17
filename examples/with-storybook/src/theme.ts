@@ -1,9 +1,9 @@
 export const lightColors = {
-  background: '#ffffff',
-  neutral: '#eaeaea',
-}
+	background: "#ffffff",
+	neutral: "#eaeaea",
+};
 
 export const darkColors = {
-  background: '#000000',
-  neutral: '#141414',
-}
+	background: "#000000",
+	neutral: "#141414",
+};

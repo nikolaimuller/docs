@@ -3,6 +3,9 @@
 	"organizeImports": {
 		"enabled": false
 	},
+	"formatter": {
+		"enabled": true
+	},
 	"linter": {
 		"enabled": true,
 		"rules": {
@@ -10,10 +13,6 @@
 		}
 	},
 	"files": {
-		"ignore": [
-			".yarn",
-			"node_modules",
-			"dist"
-		]
+		"ignore": [".yarn", "node_modules", "dist"]
 	}
 }
