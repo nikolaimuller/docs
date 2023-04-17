@@ -6,7 +6,6 @@ Object.defineProperty(exports, '__esModule', { value: true });
 var jsxRuntime = require('react/jsx-runtime');
 var react = require('react');
 var Chapters = require('./Chapters.js');
-require('./styles/main.css.js');
 
 const defaultTheme = {
     "ui-radius": "4px",

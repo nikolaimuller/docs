@@ -8,6 +8,12 @@
     "dist",
     "README.md"
   ],
+  "exports": {
+    "styles": {
+      "import": "./dist/styles.css",
+      "require": "./dist/esm/styles.css"
+    }
+  },
   "packageManager": "yarn@3.2.1",
   "scripts": {
     "example:storybook": "start-storybook -p 6006 -c examples/with-storybook/.storybook",
@@ -36,7 +42,7 @@
     "postcss": "^8.4.22",
     "rimraf": "^5.0.0",
     "rollup": "^2.79.1",
-    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-styles": "^4.0.0",
     "rollup-plugin-typescript2": "^0.34.1",
     "rome": "^12.0.0",
     "storybook-dark-mode": "^1.1.2",

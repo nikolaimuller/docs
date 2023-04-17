@@ -2,7 +2,6 @@
 import { jsx } from 'react/jsx-runtime';
 import { useRef, useEffect } from 'react';
 import { WithChapters } from './Chapters.js';
-import './styles/main.css.js';
 
 const defaultTheme = {
     "ui-radius": "4px",

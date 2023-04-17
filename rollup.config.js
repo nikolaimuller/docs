@@ -1,7 +1,8 @@
 import pkg from "./package.json";
 
 import typescript from "rollup-plugin-typescript2";
-import postcss from "rollup-plugin-postcss";
+// import postcss from "rollup-plugin-postcss";
+import styles from "rollup-plugin-styles";
 
 const banner = `/* ${pkg.name} version: ${pkg.version} */`;
 
@@ -18,8 +19,18 @@ const config = [
 		input: "./src/index.ts",
 		strictDeprecations: true,
 		output: [
-			{ ...standardOpts, dir: "dist", format: "cjs" },
-			{ ...standardOpts, dir: "dist/esm", format: "esm" },
+			{
+				...standardOpts,
+				dir: "dist",
+				format: "cjs",
+				assetFileNames: "[name][extname]",
+			},
+			{
+				...standardOpts,
+				dir: "dist/esm",
+				format: "esm",
+				assetFileNames: "[name][extname]",
+			},
 		],
 		external: [
 			...Object.keys(pkg.dependencies),
@@ -36,7 +47,9 @@ const config = [
 					exclude: ["**/example*"],
 				},
 			}),
-			postcss(),
+			styles({
+				mode: ["extract", "styles.css"],
+			}),
 		],
 	},
 ];
