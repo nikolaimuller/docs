@@ -1,8 +1,9 @@
 {
   "name": "@mullerstd/docs",
   "version": "0.0.2",
-  "main": "dist/index.js",
-  "module": "dist/esm/index.js",
+  "type": "module",
+  "source": "src/index.ts",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist",
@@ -21,14 +22,15 @@
   "packageManager": "yarn@3.2.1",
   "scripts": {
     "example:storybook": "start-storybook -p 6006 -c examples/with-storybook/.storybook",
-    "build": "yarn clean && rollup -c",
+    "build": "bun clean && parcel build",
     "clean": "rimraf dist",
     "typecheck": "tsc --project ./tsconfig.json --noEmit",
-    "format": "rome format . --write",
-    "lint": "rome check .",
-    "pre-commit": "yarn typecheck"
+    "format": "biome format . --write",
+    "lint": "biome check .",
+    "pre-commit": "bun typecheck"
   },
   "devDependencies": {
+    "@biomejs/biome": "^1.4.1",
     "@storybook/addon-actions": "^6.5.16",
     "@storybook/addon-controls": "^6.5.16",
     "@storybook/addon-docs": "^6.5.16",
@@ -41,16 +43,14 @@
     "@types/react": "^18.0.35",
     "@types/react-dom": "^18.0.11",
     "@types/rimraf": "^4.0.5",
-    "autoprefixer": "^10.4.14",
+    "autoprefixer": "^10.4.16",
+    "bun-types": "latest",
     "husky": "^8.0.3",
-    "postcss": "^8.4.22",
+    "parcel": "^2.10.3",
+    "postcss": "^8.4.32",
     "rimraf": "^5.0.0",
-    "rollup": "^2.79.1",
-    "rollup-plugin-styles": "^4.0.0",
-    "rollup-plugin-typescript2": "^0.34.1",
-    "rome": "^12.0.0",
     "storybook-dark-mode": "^1.1.2",
-    "tailwindcss": "^3.3.1",
+    "tailwindcss": "^3.3.5",
     "typescript": "^5.0.4",
     "vite": "^2.9.15"
   },

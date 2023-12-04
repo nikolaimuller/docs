@@ -5,7 +5,7 @@ import { Button } from "./Button";
 
 import ButtonDocs from "./Button.docs.mdx";
 
-export default {
+export default ({
 	title: "Components/Button",
 	component: Button,
 	args: {
@@ -19,7 +19,7 @@ export default {
 			page: ButtonDocs,
 		},
 	},
-} as ComponentMeta<typeof Button>;
+} as ComponentMeta<typeof Button>);
 
 export const Primary: ComponentStory<typeof Button> = (args) => {
 	return <Button {...args} />;
